@@ -1,0 +1,12 @@
+mixin b-about(data)
+    - var data = data || {}
+    +b.b-about
+        .container
+            +b.b-about-title
+                +e.name!=data.name
+            +b.b-about-text
+                +e.description
+                    for item in data.items
+                        +e.P.description-paragraph!=item.text
+
+

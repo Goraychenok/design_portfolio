@@ -1,0 +1,11 @@
+mixin header(data)
+    - var data = data || {}
+    +b.header-container
+        +b.header
+            +e.UL.list
+                for item in data.items
+                    +e.LI.link
+                        a(href=item.link onclick="slowScroll('#home')")!=item.name
+            +e.burger
+                span
+

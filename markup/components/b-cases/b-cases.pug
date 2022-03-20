@@ -1,0 +1,11 @@
+mixin b-cases(data)
+    - var data = data || {}
+    +b.b-cases
+        .container
+            +b.b-cases-title
+                +e.name!=data.name
+            +b.b-cases-projects
+                for item in data.items
+                    +e.element
+                        +e.IMG(src=item.img).image
+                        +e.A(href=item.link).link!=item.text

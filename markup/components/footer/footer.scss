@@ -1,0 +1,57 @@
+.footer-title{
+    @include titleSection;
+    margin-bottom: 3rem;
+}
+.footer-title__name{
+    padding-top: 4rem;
+    @include title;
+}
+.footer-text{
+    @include textSection;
+}
+.footer-text__description{
+    @include  textSectionDesc;
+    max-width: 28rem;
+}
+.footer-text__description-paragraph{
+    @include text;
+    margin-bottom: 3rem;
+}
+.footer-button{
+    display: flex;
+    justify-content: center;
+    margin-bottom: 8rem;
+}
+.footer-button__btn{
+    @include button;
+}
+.footer-button__btn:hover{
+    @include buttonHover;
+}
+.footer-links{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 4.5rem;
+}
+.footer-links__element{
+    margin: 0 30px;
+}
+.footer-description{
+    text-align: center;
+}
+.footer-description__text{
+    margin: 0;
+    font-family: $GilroyMedium;
+    font-size: 1.4rem;
+    line-height: 1.7rem;
+    color: #828282;
+}
+@media (max-width: 576px) {
+    .footer-button__btn{
+        width: 100%;
+    }
+    .footer-button{
+        margin-bottom: 4rem;
+    }
+}

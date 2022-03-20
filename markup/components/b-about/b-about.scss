@@ -1,0 +1,23 @@
+.b-about{
+    @include sectionRose;
+}
+.b-about-title{
+    @include titleSection;
+    margin-bottom: 2rem;
+}
+.b-about-title__name{
+    @include title;
+}
+.b-about-text{
+    @include textSection;
+
+}
+.b-about-text__description{
+    @include textSectionDesc;
+    max-width: 48rem;
+}
+.b-about-text__description-paragraph{
+    @include text;
+    margin-bottom: 4.4rem;
+
+}

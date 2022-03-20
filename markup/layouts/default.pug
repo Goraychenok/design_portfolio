@@ -1,0 +1,78 @@
+doctype html
+html(class="no-js", lang="ru")
+    block vars
+
+    include ../../node_modules/bemto.pug/bemto
+    include ../components/head/head.pug
+    include ../components/footer/footer.pug
+    include ../components/header/header.pug
+
+
+    head
+        +head(head.defaults)
+
+    header
+        +header({items:[
+                {
+                    name: 'Home',
+                    link: 'javascript://0',
+                    to: 'home'
+                },
+                {
+                    name: 'About me',
+                    link: 'javascript://0',
+                    to: 'about'
+                },
+                {
+                    name: 'Skills',
+                    link: 'javascript://0',
+                    to: 'skills'
+                },
+                {
+                    name: 'Portfolio',
+                    link: 'javascript://0',
+                    to: 'portfolio'
+                },
+                {
+                    name: 'Contracts',
+                    link: 'javascript://0',
+                    to: 'contacts'
+                },
+
+            ]
+        })
+
+    body.page
+        |%=symbols=%
+        block content
+
+        //a.page__up
+            //!=pugHelpers.Icon.call(locals, {iconName: 'up'})
+
+        //- Main scripts. You can replace it, but I recommend you to leave it here
+        //script(src='https://unpkg.com/container-query-polyfill/cqfill.iife.min.js')
+        script(src='%=static=%js/vendor.js')
+        script(src='%=static=%js/main.js')
+
+    footer
+        +footer({name: 'Contacts', text: 'Want to know more or just chat? You are welcome!', button: 'Send message',
+            items: [
+                {
+                    link: '#',
+                    img: '../static/img/general/links/in.svg'
+                },
+                {
+                    link: '#',
+                    img: '../static/img/general/links/insta.svg'
+                },
+                {
+                    link: '#',
+                    img: '../static/img/general/links/behance.svg'
+                },
+                {
+                    link: '#',
+                    img: '../static/img/general/links/ball.svg'
+                },
+            ]
+        })
+

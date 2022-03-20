@@ -1,0 +1,128 @@
+.b-skills-title__name{
+    @include title;
+}
+.b-skills-title{
+    @include titleSection;
+    margin-bottom: 7rem;
+}
+.b-skills-text{
+    @include textSection;
+    margin-bottom: 8rem;
+}
+.b-skills-text__description{
+    @include textSectionDesc;
+}
+.b-skills-text__description-paragraph{
+    @include text;
+}
+.b-skills-row{
+    display: flex;
+    align-items: inherit;
+    justify-content: space-between;
+}
+.b-skills-row__element{
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+}
+.b-skills-row__image{
+    margin-bottom: 2rem;
+    height: 11rem;
+    aspect-ratio: 16/16;
+    padding: 0 2rem;
+}
+.b-skills-row__name{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+.b-skills-row__name-text{
+    font-family: $GilroyBold;
+    font-size: 1.4rem;
+    line-height: 1.7rem;
+    color: #828282;
+    margin-top: 0;
+    margin-bottom: 4rem;
+    max-width: 10rem;
+}
+.b-skills-row__stars{
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    margin-top: auto;
+}
+.b-skills-row__star  path{
+    fill: #E5E5E5;
+}
+.b-skills-row__stars[data-star='1'] svg:nth-child(1) path{
+    fill: #000;
+}
+.b-skills-row__stars[data-star='2'] svg:nth-child(1) path{
+    fill: #000;
+}
+.b-skills-row__stars[data-star='2'] svg:nth-child(2) path{
+    fill: #000;
+}
+.b-skills-row__stars[data-star='3'] svg:nth-child(1) path{
+    fill: #000;
+}
+.b-skills-row__stars[data-star='3'] svg:nth-child(2) path{
+    fill: #000;
+}
+.b-skills-row__stars[data-star='3'] svg:nth-child(3) path{
+    fill: #000;
+}
+.b-skills-row__stars[data-star='4'] svg:nth-child(1) path{
+    fill: #000;
+}
+.b-skills-row__stars[data-star='4'] svg:nth-child(2) path{
+    fill: #000;
+}
+.b-skills-row__stars[data-star='4'] svg:nth-child(3) path{
+    fill: #000;
+}
+.b-skills-row__stars[data-star='4'] svg:nth-child(4) path{
+    fill: #000;
+}
+
+.b-skills-row__stars[data-star='5'] svg:nth-child(1) path{
+    fill: #000;
+}
+.b-skills-row__stars[data-star='5'] svg:nth-child(2) path{
+    fill: #000;
+}
+.b-skills-row__stars[data-star='5'] svg:nth-child(3) path{
+    fill: #000;
+}
+.b-skills-row__stars[data-star='5'] svg:nth-child(4) path{
+    fill: #000;
+}
+.b-skills-row__stars[data-star='5'] svg:nth-child(5) path{
+    fill: #000;
+}
+
+@media (max-width: 1200px) {
+    .b-skills-title{
+        margin-bottom: 5rem;
+    }
+    .b-skills-text{
+        margin-bottom: 4rem;
+    }
+}
+
+@media (max-width: 576px) {
+    .b-skills-row{
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+    .b-skills-row__element{
+        width: 51%;
+        margin-bottom: 8rem;
+    }
+    .b-skills-row__element:last-child{
+        margin-bottom: 0;
+    }
+
+}
+
+

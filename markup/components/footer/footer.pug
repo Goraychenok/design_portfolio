@@ -1,0 +1,19 @@
+mixin footer(data)
+    - var data = data || {}
+    footer.footer
+        .container
+            .footer-title
+                .footer-title__name!=data.name
+            .footer-text
+                .footer-text__description
+                    p.footer-text__description-paragraph!=data.text
+            .footer-button
+                button.footer-button__btn!=data.button
+            .footer-links
+                for item in data.items
+                    a(href=item.link).footer-links__element
+                        img.footer-links__image(src=item.img)
+            .footer-description
+                p.footer-description__text Like me on
+                p.footer-description__text LinkedIn, Instagram, Behance, Dribble
+

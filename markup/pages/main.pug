@@ -1,0 +1,80 @@
+extends ../layouts/default.pug
+
+include ../components/b-main/b-main
+include ../components/b-about/b-about
+include ../components/b-sckills/b-skills
+include ../components/b-cases/b-cases
+include ../components/footer/footer
+
+block vars
+    - var title = 'Главная'
+
+block content
+    .page__wrapper
+        .page_b-main
+            +b-main({name: "Denis Novik", characteristics:"UX | UI designer 24 years old, Minsk"})
+            +b-about({name: "About",
+                items: [
+                    {
+                        text: 'Hi, I\'m Denis – UX/UI designer from Minsk. \n' +
+                            '                        I\'m interested in design and everything connected with it.'
+                    },
+                    {
+                        text: 'I\'m studying at courses "Web and mobile design \n' +
+                            '                        interfaces" in IT-Academy.'
+                    },
+                    {
+                        text: 'Ready to implement excellent projects\n' +
+                            '                         with wonderful people.'
+                    }
+                ]
+            })
+            +b-skills({name:'Skills', text: 'I work in such programs as',
+                items: [
+                    {
+                        img: '../static/img/content/skills/ps.svg',
+                        name: 'Adobe Photoshop',
+                        star: 4
+                    },
+                    {
+                        img: '../static/img/content/skills/illistrator.svg',
+                        name: 'Adobe Illustrator',
+                        star: 3
+                    },
+                    {
+                        img: '../static/img/content/skills/effects.svg',
+                        name: 'Adobe After Effects',
+                        star: 4
+                    },
+                    {
+                        img: '../static/img/content/skills/firgma.svg',
+                        name: 'Figma',
+                        star: 4
+                    },
+                ]
+
+            })
+            +b-cases({name: 'Portfolio',
+                items: [
+                    {
+                        img: '../static/img/content/projects/first.png',
+                        text: 'Online fashion store - Homepage',
+                        link: '#'
+                    },
+                    {
+                        img: '../static/img/content/projects/second.png',
+                        text: 'Reebok Store - Concept',
+                        link: '#'
+                    },
+                    {
+                        img: '../static/img/content/projects/third.png',
+                        text: 'Braun Landing Page - Concept',
+                        link: '#'
+                    },
+                ]
+            })
+
+
+
+
+

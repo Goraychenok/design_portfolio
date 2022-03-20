@@ -1,0 +1,14 @@
+mixin b-main(data)
+    - var data = data || {}
+    +b.b-main(id="home")
+        .container
+            +b.b-main-top
+                +e.name!=data.name
+                +e.characteristics!=data.characteristics
+                +e.language
+                    +e.language-name ru
+                    +e.language-partition
+                    +e.language-name.active eng
+            +b.b-main-bottom
+                +e.IMG(src="../../static/img/content/person_desktop.png").image
+                +e.IMG(src="../../static/img/content/person_mobile.png").image-mobile

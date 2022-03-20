@@ -1,0 +1,79 @@
+// Mixins.
+
+@mixin nl {
+    margin: 0;
+    padding: 0;
+    text-indent: 0;
+    list-style: none;
+    list-style-position: outside;
+}
+
+@mixin cf {
+    &:before,
+    &:after {
+        display: table;
+        content: "";
+    }
+
+    &:after {
+        clear: both;
+    }
+
+    .lt-ie8 & {
+        zoom: 1;
+    }
+}
+
+@mixin blocks-justify {
+    text-align: justify;
+    text-justify: newspaper;
+}
+
+@mixin titleSection{
+    display: flex;
+    justify-content: center;
+}
+@mixin title{
+    font-family: $GilroyBold;
+    font-size: 3.4rem;
+    line-height: 4.2rem;
+}
+@mixin textSection{
+    display: flex;
+    justify-content: center;
+}
+@mixin  text{
+    font-family: $GilroyMedium;
+    font-size: 1.8rem;
+    line-height: 2.2rem;
+    color: #070707;
+    margin-top: 0;
+}
+
+@mixin textSectionDesc{
+    text-align: center;
+}
+
+@mixin sectionRose{
+    background: #F6F6F6;
+}
+
+@mixin  button{
+    cursor: pointer;
+    border: none;
+    border-radius: 2rem;
+    font-family: $GilroyBold;
+    font-size: 1.8rem;
+    line-height: 2.2rem;
+    color: #fff;
+    padding:1rem 3rem ;
+    background: #070707;
+    transition:  0.3s;
+}
+
+@mixin  buttonHover{
+    color: #070707;
+    background: #F6F6F6;
+}
+
+// You can add your own mixins here:
